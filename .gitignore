@@ -1,0 +1,18 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore .env files (dotenv files)
+.env
+
+# Ignore logs and other generated files
+*.log
+npm-debug.log*
+
+# Ignore any files created by your editor/IDE
+.vscode/
+.idea/
+
+# Ignore files generated during build processes
+/build/
+/dist/
+/out/
