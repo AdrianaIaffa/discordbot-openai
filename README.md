@@ -13,6 +13,7 @@ For Production Enviroments...
 npm install discord.js
 npm install dotenv
 npm install openai
+npm axios
 ```
 # Setting Up Environment Variables
 This project uses environment variables to manage sensitive information and configurations. To set up the necessary environment variables, replace the placeholder values with your actual credentials and tokens. Be sure not to share these values publicly or expose them in your code repository:

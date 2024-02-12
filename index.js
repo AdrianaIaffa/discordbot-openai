@@ -3,11 +3,15 @@ const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const dotenv = require('dotenv');
 const fs = require('node:fs');
 const path = require('node:path');
+const { OpenAI } = require('openai');
+
 
 // --------- DOT ENV CONFIG -----------//
 
 dotenv.config();
 const token = process.env.DISCORD_TOKEN;
+const openaiToken = process.env.OPENAI_TOKEN; 
+const openai = new OpenAI({ apiKey: openaiToken });
 
 console.log(process.env.A);
 console.log(process.env.B);
@@ -49,7 +53,7 @@ for (const folder of commandFolders) {
 	}
 }
 
-// ------------- DYNAMICALLY RETRIEVE EVENT FILED IN THE EVENTS FOLDER -------------//
+// ------------- DYNAMICALLY RETRIEVE EVENT FILEs IN THE EVENTS FOLDER -------------//
 
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
@@ -63,6 +67,7 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
+
 
 
 client.login(token);
