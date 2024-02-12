@@ -5,6 +5,8 @@ module.exports = {
 		.setName('ping')
 		.setDescription('Replies with Pong!'),
 	async execute(interaction) {
+		// console.log('Command data:', this.data); 
+		// console.log('Interaction:', interaction); 
 		await interaction.reply({ content: 'Secret Pong!', ephemeral: true });
 	},
 };
