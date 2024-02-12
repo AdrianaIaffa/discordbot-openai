@@ -1,9 +1,10 @@
 # Discord chat-bot
 # Clone the Repository
 Clone this repository to your local machine using the following command:
+
 ``sh
 git clone https://github.com/AdrianaIaffa/discordbot-openai.git
-``sh
+```
 # Installation
 Requires [Node.js](https://nodejs.org/en) to run. You can download and install it from the official [Node.js](https://nodejs.org/en) website.
 For Production Enviroments...
